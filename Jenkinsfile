@@ -1,6 +1,6 @@
 pipeline
 {
-  agentany{
+  agent any
     stages{
       stage("Build stage"){
         steps{echo "Building..."}
@@ -10,4 +10,4 @@ pipeline
       }
     }
   }
-}
+
