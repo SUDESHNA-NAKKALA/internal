@@ -1,25 +1,13 @@
-pipeline {
-
-agent any
-
-stages{
-
-stage("Build_stage"){
-
-steps{ echo "Building Project....." }
-
+pipeline
+{
+  agentany{
+    stages{
+      stage("Build stage"){
+        steps{echo "Building..."}
+        stage("Test stage"){
+          steps{echo "Testing..."}
+        }
+      }
+    }
+  }
 }
-
-stage("Test_stage"){
-
-steps{ echo "Testing Project...." }
-
-}
-
-stage("Deploy_stage")
-
-steps{
-
-echo "Deploying Project...."
-
-}}}
